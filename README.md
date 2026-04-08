@@ -98,27 +98,27 @@ EduMetrics closes that gap. Every Sunday, the system recalculates metrics for ev
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        EduMetrics System                         │
-│                                                                   │
+│                        EduMetrics System                        │
+│                                                                 │
 │  ┌──────────────┐    ┌──────────────────┐    ┌───────────────┐  │
-│  │   React +    │    │  Django / Flask   │    │  PostgreSQL   │  │
-│  │  Tailwind    │◀──▶│   REST API        │◀──▶│  (Supabase)   │  │
+│  │   HTML +     │    │  Django / Flask  │    │  PostgreSQL   │  │
+│  │ Tailwind +JS ◀──▶│   REST API       │◀──▶ (Supabase)    │  │
 │  │  Frontend    │    │                  │    │               │  │
 │  └──────────────┘    └────────┬─────────┘    └───────────────┘  │
-│                               │                                   │
-│                    ┌──────────▼──────────┐                       │
-│                    │   Analytics Engine   │                       │
-│                    │   (Python)           │                       │
-│                    │                      │                       │
-│                    │  engine/features.py  │                       │
-│                    │  engine/scores.py    │                       │
-│                    │  engine/risk.py      │                       │
-│                    │  engine/flags.py     │                       │
-│                    │  engine/scheduler.py │                       │
-│                    └──────────┬──────────┘                       │
-│                               │                                   │
-│            ┌──────────────────┼──────────────────┐               │
-│            ▼                  ▼                   ▼               │
+│                               │                                 │
+│                    ┌──────────▼──────────┐                      │
+│                    │   Analytics Engine   │                     │
+│                    │   (Python)           │                     │
+│                    │                      │                     │
+│                    │  engine/features.py  │                     │
+│                    │  engine/scores.py    │                     │
+│                    │  engine/risk.py      │                     │
+│                    │  engine/flags.py     │                     │
+│                    │  engine/scheduler.py │                     │
+│                    └──────────┬──────────┘                      │
+│                               │                                 │
+│            ┌──────────────────┼──────────────────┐              │
+│            ▼                  ▼                   ▼             │
 │     ┌────────────┐   ┌──────────────┐   ┌──────────────────┐    │
 │     │  ML Models │   │  Cron Jobs   │   │   Claude API     │    │
 │     │ (sklearn / │   │ (Render /    │   │ (report & email  │    │
@@ -194,7 +194,7 @@ EduMetrics runs five types of analysis, all triggered automatically:
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
-| Frontend | React 18 + Vite | Component-based, fast, great ecosystem for dashboards |
+| Frontend | HTML, JS | Component-based, fast, great ecosystem for dashboards |
 | Styling | Tailwind CSS | Utility-first, consistent design tokens, no CSS files |
 | Backend | Django 4 or Flask | Python-native so ML and API live in same codebase |
 | Database | PostgreSQL (Supabase) | Relational — student data is deeply relational; Supabase is always-on free tier |
