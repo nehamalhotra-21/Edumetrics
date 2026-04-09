@@ -421,7 +421,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--txt);min-height:10
   .stat-row{grid-template-columns:repeat(2,1fr)}
   .dm-two-col{grid-template-columns:1fr}
   .summary-section{grid-template-columns:1fr}
-  .anl-two{grid-template-columns:1fr}
+  .anl-two{grid-template-columns:1fr 1fr}
   .anl-three{grid-template-columns:1fr 1fr}
   .anl-stats-row{grid-template-columns:repeat(2,1fr)}
 }
